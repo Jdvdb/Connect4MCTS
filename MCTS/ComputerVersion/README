@@ -1,0 +1,18 @@
+Creator: Jordan Van Den Bruel
+Project: Connect Four with Monte Carlo Tree Search for command line
+Date: April 10, 2020
+
+Files in Computer:
+ConnectFour.cpp (connect 4 game class)
+ConnectFour.h (header file for ConnectFour.cpp)
+connectFourComputer.cpp (main program)
+ConnectNode.cpp (tree node class for MCTS)
+ConnectNode.h (header file for ConnectNode.cpp)
+Makefile (used to compile code)
+mcts.cpp (main driver of Monte Carlo tree search algorithm)
+mcts.h (header file for mcts.cpp)
+
+To run the program:
+1. In the 'Computer' directory, use 'make' to compile executable for desktop.
+2. Run the executable created to begin a game. It will prompt you with inputs
+3. At the end of the game, the program will terminate. Run it again for a rematch

@@ -1,0 +1,9 @@
+Creator: Jordan Van Den Bruel
+Project: Connect Four with Monte Carlo Tree Search on an Arduino Mega 2560
+Date: April 10, 2020
+
+This is a Connect 4 game designed with an AI built on Monte Carlo Tree Search. The original purpose of this project was as a final submission for my CMPUT 275 class at the University of Alberta.
+
+There are 2 main sub folders from here. One is a game designed to be run on an Arduino Mega 2560 with a TFT LCD display with touch panel. This version is run with both an Arduino and computer since the Monte Carlo tree search would take up too much memory on such a small device. This is accomplished by having the computer write to and read from the serial monitor on the arduino. The entire UI is built on the arduino so once the program is running you do not need to monitor the computer to play any games. 
+
+The second game is designed to be played in a command line. It is a simple c++ file that reads from stdin and writes to stdout. At the beginning the program prompts you with options to input for the game such as difficulty and who will start. The instructions are pretty straight forward once you've launched the program. The code will only play one game before it finishes the program, meaning you have to restart the executable if you want a rematch.

@@ -1,0 +1,36 @@
+Creator: Jordan Van Den Bruel
+Project: Connect Four with Monte Carlo Tree Search on an Arduino Mega 2560
+Date: April 10, 2020
+
+Folders included:
+Arduino
+Computer
+
+Files in Arduino:
+CFArduino.cpp (connect four game class for the arduino)
+CFArduino.h (header file for CFArduino.cpp)
+connectFourArduino.cpp (main file for program)
+Makefile (used to compile code in the command line)
+
+Files in Computer:
+ConnectFour.cpp (connect 4 game class)
+ConnectFour.h (header file for ConnectFour.cpp)
+connectFourComputer.cpp (main program)
+ConnectNode.cpp (tree node class for MCTS)
+ConnectNode.h (header file for ConnectNode.cpp)
+Makefile (used to compile code)
+mcts.cpp (main driver of Monte Carlo tree search algorithm)
+mcts.h (header file for mcts.cpp)
+serialport.cpp (functions provided by Alberta CMPUT 275 class for serial communication)
+serialport.h (header file for serialport.cpp)
+
+
+note: I always run this in a command line interface that already has the arduino toolchain installed.
+
+
+To run the program:
+1. Ensure connectFourArduino has been loaded onto the arduino
+2. In the 'Computer' directory, use 'make' to compile executable for desktop.
+3. With the arduino connected to the computer, run the program "connectFourComputer"
+4. The program will only run if it can find the arduino, otherwise it will end.
+5. If the program starts, use the UI on the Arduino to start a game.
