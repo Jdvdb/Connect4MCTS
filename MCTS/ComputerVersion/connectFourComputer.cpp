@@ -134,7 +134,7 @@ int main() {
 		} else {
 			cout << "computer is thinking..." << endl;
 
-			newComputerId = MCTS(game, tree, computerColour, currentId, root->id, rollouts, greed);
+			newComputerId = MCTS(tree, computerColour, currentId, root->id, rollouts, greed);
 
 			root = tree.at(newComputerId);
 

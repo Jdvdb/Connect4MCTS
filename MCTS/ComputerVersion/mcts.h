@@ -12,7 +12,6 @@ using namespace std;
 /*
 Main function that drives MCTS algorithm
 Arguments:
-    const ConnectFour& game: the current game state
     unordered_map<int, ConnectNode*>& tree: the tree used for MCTS
     char myColour: the colour the computer is in the current game
     int& currentId: the next ID value to be used to create children
@@ -21,7 +20,7 @@ Arguments:
     double greed: impacts how greedy ai is (greedier performs much worse)
 Returns: the ID of the next best move
 */
-int MCTS(const ConnectFour& game, unordered_map<int, ConnectNode*>& tree, char myColour, int& currentId, int rootId, int rollouts, double greed);
+int MCTS(unordered_map<int, ConnectNode *> &tree, char myColour, int &currentId, int rootId, int rollouts, double greed);
 
 /*
 Determines the next best node to travel to based on UCT
@@ -30,7 +29,7 @@ Arguments:
     unorederd_map<int, ConnectNode*>& tree: the tree used for MCTS
 Returns: the ID of the most promising child node
 */
-int UCT(ConnectNode* currentNode, unordered_map<int, ConnectNode*>& tree);
+int UCT(ConnectNode *currentNode, unordered_map<int, ConnectNode *> &tree);
 
 /*
 Creates the children for a current leaf node
@@ -41,7 +40,7 @@ Arguments:
     int& currentId: the ID value that should be assigned to new children
 Returns: none
 */
-void expansion(ConnectNode* currentNode, unordered_map<int, ConnectNode*>& tree, char nextColour, int& currentId);
+void expansion(ConnectNode *currentNode, unordered_map<int, ConnectNode *> &tree, char nextColour, int &currentId);
 
 /*
 Performs simulations until an end game is reached and returns the value of that game
@@ -52,7 +51,7 @@ Arguments:
     double& depth: keeps track of the number of moves in the current game state
 Returns: the win value for this rollout. Greater number means better scenario
 */
-double rollout(ConnectNode* currentNode, char myColour, char playerColour, double& depth);
+double rollout(ConnectNode *currentNode, char myColour, char playerColour, double &depth);
 
 /*
 Gives the win value of a rollout to all of the parent nodes above it
@@ -63,7 +62,7 @@ Arguments:
     int rootId: the ID of the root so that back propogation stops
 Returns: None
 */
-void backPropogation(ConnectNode* currentNode, unordered_map<int, ConnectNode*>& tree, double win, int rootId);
+void backPropogation(ConnectNode *currentNode, unordered_map<int, ConnectNode *> &tree, double win, int rootId);
 
 /*
 Finds the best move to play
@@ -72,7 +71,6 @@ Arguments:
     unordered_map<int, ConnectNode*>& tree: the tree used for MCTS
 Returns: the ID of the next most promising game state
 */
-int maxChild(ConnectNode* root, unordered_map<int, ConnectNode*>& tree);
-
+int maxChild(ConnectNode *root, unordered_map<int, ConnectNode *> &tree);
 
 #endif

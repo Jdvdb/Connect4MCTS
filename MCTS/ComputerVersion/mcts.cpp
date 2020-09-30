@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int MCTS(const ConnectFour& game, unordered_map<int, ConnectNode*>& tree, char myColour, int& currentId, int rootId, int rollouts, double greed) {
+int MCTS(unordered_map<int, ConnectNode*>& tree, char myColour, int& currentId, int rootId, int rollouts, double greed) {
 	// generate random seed for simulations
 	srand(time(0));
 
